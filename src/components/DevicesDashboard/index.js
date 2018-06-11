@@ -3,7 +3,19 @@ import { Device } from "../index";
 
 const styles = {
   container: {
-    width: "70%",
+    width: "80%",
+    minHeight: 700
+  },
+  panel: {
+    width: "95%",
+    display: "flex",
+    justifyContent: "space-between"
+  },
+  panelItem: {
+    margin: "0 20px"
+  },
+  list: {
+    width: "100%",
     display: "flex",
     flexWrap: "wrap"
   }
@@ -22,12 +34,39 @@ class DevicesDashboard extends Component {
       .catch(err => console.error(err));
   }
 
+  handleChange = e => {
+    this.setState({ searchTerm: e.target.value });
+  };
+
   render() {
     const { devices, searchTerm } = this.state;
-    const { container } = styles;
+    const { container, panel, panelItem, list } = styles;
+    const numOfActiveDevices = devices.filter(d => d.active).length;
     return (
       <div style={container}>
-        {devices.map((device, idx) => <Device key={idx} device={device} />)}
+        <div style={panel}>
+          <div style={panelItem}>
+            Active:
+            <span style={{ color: "green", margin: "0 10px" }}>
+              {numOfActiveDevices}
+            </span>
+            {"/"}
+            <span style={{ color: "red", margin: "0 10px" }}>
+              {devices.length - numOfActiveDevices}
+            </span>
+          </div>
+          <div style={panelItem}>
+            Search: <input type="text" onChange={this.handleChange} />
+          </div>
+        </div>
+        <div style={list}>
+          {devices
+            .filter(
+              device =>
+                device.name.toUpperCase().indexOf(searchTerm.toUpperCase()) >= 0
+            )
+            .map((device, idx) => <Device key={idx} device={device} />)}
+        </div>
       </div>
     );
   }
