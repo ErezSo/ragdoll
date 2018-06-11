@@ -1,10 +1,4 @@
 {
-  "presets": [
-    "es2015",
-    "es2017",
-    "react"
-  ],
-  "plugins": [
-    "react-hot-loader/babel"
-  ]
+  "presets": ["es2015", "es2017", "react"],
+  "plugins": ["react-hot-loader/babel", "transform-class-properties"]
 }

@@ -1,13 +1,22 @@
-import React from 'react';
+import React from "react";
+import { DevicesDashboard } from "./components";
+
+const styles = {
+  container: {
+    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  }
+};
 
 function App() {
-    return (
-        <div>
-            <h1>Relayr Device Dashboard</h1>
-            <p>Feel free to implement UI the way you like.</p>
-            <p>You can write styles in ./styles.css.</p>
-        </div>
-    );
+  const { container } = styles;
+  return (
+    <div style={container}>
+      <DevicesDashboard />
+    </div>
+  );
 }
 
 export default App;
