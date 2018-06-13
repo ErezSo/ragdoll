@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { Component } from "react";
 import styled from "styled-components";
 import { DevicesList, Panel } from "../index";
@@ -41,9 +42,9 @@ class DevicesDashboard extends Component {
                 d.name === device.name ? Object.assign({}, d, { active }) : d
             )
           }));
-        res.status === 400 && console.log("Something went wrong."); // eslint-disable-line no-console
+        res.status === 400 && console.log("Something went wrong.");
       })
-      .catch(err => console.log(err)); // eslint-disable-line no-console
+      .catch(err => console.log(err));
   };
 
   render() {
