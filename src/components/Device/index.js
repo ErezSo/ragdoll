@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   margin: 20px;
 `;
 const List = styled.ul`
-  list-style-type: "none";
+  list-style-type: none;
 `;
 
 const Device = ({ device, toggleDevice, disableButton }) => {
