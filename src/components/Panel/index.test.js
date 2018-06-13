@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Panel from "./";
+import Panel, { Active, Inactive } from "./";
 
 describe("Panel", () => {
   let wrapper;
@@ -27,7 +27,18 @@ describe("Panel", () => {
   });
 
   it("render the number of active an inactive devices", () => {
-    expect(wrapper.find(".active").text()).toBe("1");
-    expect(wrapper.find(".inactive").text()).toBe("0");
+    expect(
+      wrapper
+        .find(Active)
+        .dive()
+        .text()
+    ).toBe("1");
+
+    expect(
+      wrapper
+        .find(Inactive)
+        .dive()
+        .text()
+    ).toBe("0");
   });
 });

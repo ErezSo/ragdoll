@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Panel renders correctly 1`] = `
-"<div style={{...}}>
+"<styled.div>
   <div>
     Active devices:
-    <span className=\\"active\\" style={{...}}>
+    <styled.span>
       1
-    </span>
+    </styled.span>
     /
-    <span className=\\"inactive\\" style={{...}}>
+    <styled.span>
       0
-    </span>
+    </styled.span>
   </div>
   <div>
     Search: 
     <input type=\\"text\\" onChange={[undefined]} />
   </div>
-</div>"
+</styled.div>"
 `;

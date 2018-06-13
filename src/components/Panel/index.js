@@ -6,11 +6,11 @@ const Wrapper = styled.div`
   justify-content: space-between;
   margin: 20px;
 `;
-const Active = styled.span`
+export const Active = styled.span`
   color: #1cc51c;
   margin: 0 10px;
 `;
-const Inactive = styled.span`
+export const Inactive = styled.span`
   color: red;
   margin: 0 10px;
 `;

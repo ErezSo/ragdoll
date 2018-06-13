@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Device renders correctly 1`] = `
-"<div style={{...}}>
-  <ul style={{...}}>
+"<styled.div>
+  <styled.ul>
     <li>
       Name: 
       rotation_rate_gamma
@@ -29,6 +29,6 @@ exports[`Device renders correctly 1`] = `
         </button>
       </span>
     </li>
-  </ul>
-</div>"
+  </styled.ul>
+</styled.div>"
 `;
