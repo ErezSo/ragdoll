@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dashboard renders correctly 1`] = `
+"<div style={{...}}>
+  <Panel devices={{...}} handleSearch={[Function]} />
+  <DevicesList devices={{...}} searchTerm=\\"\\" toggleDevice={[Function]} />
+</div>"
+`;

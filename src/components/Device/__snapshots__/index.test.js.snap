@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Device renders correctly 1`] = `
+"<div style={{...}}>
+  <ul style={{...}}>
+    <li>
+      Name: 
+      rotation_rate_gamma
+    </li>
+    <li>
+      Unit: 
+      deg/s
+    </li>
+    <li>
+      Value: 
+      0
+    </li>
+    <li>
+      Timestamp: 
+      2018-6-13 10:21:06
+    </li>
+    <li>
+      Status: 
+      Active
+       
+      <span>
+        <button disabled={true} onClick={[Function: onClick]}>
+          Toggle
+        </button>
+      </span>
+    </li>
+  </ul>
+</div>"
+`;
