@@ -11,7 +11,7 @@ const styles = {
   }
 };
 
-const Device = ({ device }) => {
+const Device = ({ device, toggleDevice, disableButton }) => {
   const { container, list } = styles;
   return (
     <div style={container}>
@@ -20,7 +20,17 @@ const Device = ({ device }) => {
         <li>Unit: {device.unit}</li>
         <li>Value: {device.value}</li>
         <li>Timestamp: {new Date(device.timestamp).toLocaleString()}</li>
-        <li>Status: {device.active ? "Active" : "Inactive"}</li>
+        <li>
+          Status: {device.active ? "Active" : "Inactive"}{" "}
+          <span>
+            <button
+              disabled={disableButton}
+              onClick={() => toggleDevice(device)}
+            >
+              Toggle
+            </button>
+          </span>
+        </li>
       </ul>
     </div>
   );
