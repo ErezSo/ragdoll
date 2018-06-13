@@ -1,12 +1,12 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 import { DevicesList, Panel } from "../index";
 
-const styles = {
-  container: {
-    width: "80%",
-    minHeight: 700
-  }
-};
+const Wrapper = styled.div`
+  width: 80%;
+  min-height: 700px;
+  max-width: 1400px;
+`;
 
 class DevicesDashboard extends Component {
   state = {
@@ -48,19 +48,15 @@ class DevicesDashboard extends Component {
 
   render() {
     const { devices, searchTerm } = this.state;
-    const { container } = styles;
     return (
-      <div style={container}>
-        <Panel
-          devices={devices}
-          handleSearch={this.handleSearch}
-        />
+      <Wrapper>
+        <Panel devices={devices} handleSearch={this.handleSearch} />
         <DevicesList
           devices={devices}
           searchTerm={searchTerm}
           toggleDevice={this.toggleDevice}
         />
-      </div>
+      </Wrapper>
     );
   }
 }

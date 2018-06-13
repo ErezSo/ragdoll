@@ -1,21 +1,19 @@
 import React from "react";
+import styled from "styled-components";
 
-const styles = {
-  container: {
-    border: "1px solid black",
-    paddingRight: 38,
-    margin: 20
-  },
-  list: {
-    listStyleType: "none"
-  }
-};
+const Wrapper = styled.div`
+  border: 1px solid black;
+  padding-right: 38px;
+  margin: 20px;
+`;
+const List = styled.ul`
+  list-style-type: "none";
+`;
 
 const Device = ({ device, toggleDevice, disableButton }) => {
-  const { container, list } = styles;
   return (
-    <div style={container}>
-      <ul style={list}>
+    <Wrapper>
+      <List>
         <li>Name: {device.name}</li>
         <li>Unit: {device.unit}</li>
         <li>Value: {device.value}</li>
@@ -31,8 +29,8 @@ const Device = ({ device, toggleDevice, disableButton }) => {
             </button>
           </span>
         </li>
-      </ul>
-    </div>
+      </List>
+    </Wrapper>
   );
 };
 

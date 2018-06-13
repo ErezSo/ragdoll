@@ -1,19 +1,17 @@
 import React from "react";
+import styled from "styled-components";
 import { Device } from "../index";
 
-const styles = {
-  container: {
-    width: "100%",
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center"
-  }
-};
+const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 
 const DevicesList = ({ devices, searchTerm, toggleDevice }) => {
-  const { container } = styles;
   return (
-    <div style={container}>
+    <Wrapper>
       {devices
         .filter(
           device =>
@@ -26,7 +24,7 @@ const DevicesList = ({ devices, searchTerm, toggleDevice }) => {
             toggleDevice={toggleDevice}
           />
         ))}
-    </div>
+    </Wrapper>
   );
 };
 
